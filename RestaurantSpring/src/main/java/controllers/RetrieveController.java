@@ -28,7 +28,7 @@ public class RetrieveController {
 		} catch (EntityNotFoundException e) {
 			return modelAndView.addObject("result", "Oops!!Receipe not found!!!");
 		}
-		Receipe receipeDetails=new Receipe(	(Long)result.getProperty("receipeId"),(String)result.getProperty("receipeName"));
+		Receipe receipeDetails = new Receipe((Long)result.getProperty("receipeId"),(String)result.getProperty("receipeName"));
 		return modelAndView.addObject("result", receipeDetails);
 	}
 }
