@@ -29,6 +29,6 @@ public class RetrieveController {
 			return modelAndView.addObject("result", "Oops!!Receipe not found!!!");
 		}
 		Receipe receipeDetails=new Receipe(	(Long)result.getProperty("receipeId"),(String)result.getProperty("receipeName"));
-		return modelAndView.addObject("result", receipeDetails.toString());
+		return modelAndView.addObject("result", receipeDetails);
 	}
 }
